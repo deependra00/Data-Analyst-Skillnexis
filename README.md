@@ -1,36 +1,53 @@
-# Data Analysis Using Pandas – Global Superstore
+# Clean a Messy Dataset in Pandas
 
-This project demonstrates basic data-analysis and preprocessing tasks using Python and Pandas on the Global Superstore dataset.
+This project demonstrates practical **data cleaning and preprocessing using Python and Pandas**.
 
 ## Tasks Completed
 
-1. Load the Excel dataset using Pandas and display basic information.
-2. Identify and handle missing values and duplicate records.
-3. Group data by Category and calculate total revenue using Sales.
-4. Sort data using multiple columns.
-5. Create a correlation matrix for numerical columns.
+1. Loaded the CSV dataset using Pandas.
+2. Cleaned column names and whitespace.
+3. Identified and removed duplicate records.
+4. Handled missing values using median imputation for numeric columns and mode/`Unknown` for text columns.
+5. Filtered rows using a data-driven numeric condition.
+6. Created derived columns from the available dataset fields.
+7. Exported the cleaned dataset as CSV.
 
-## Tools Used
+## Dataset Summary
+
+- Original shape: `32 rows × 5 columns`
+- Duplicate rows removed: `1`
+- Final shape: `31 rows × 7 columns`
+
+## New Columns
+
+- numeric_total = duration + pulse
+- non_missing_count
+
+## Filtering
+
+Filtered out rows with no populated fields.
+
+## Files
+
+- `data.csv` — original uploaded dataset
+- `cleaned_dataset.csv` — cleaned and filtered dataset
+- `Clean_Messy_Dataset_Pandas.ipynb` — reproducible Jupyter Notebook
+- `cleaning_summary.json` — cleaning statistics
+- `README.md` — project documentation
+
+## Tools
 
 - Python
 - Pandas
 - Jupyter Notebook
-- Microsoft Excel
-
-## Files
-
-- `Global_Superstore_Data_Analysis.ipynb` — Complete analysis notebook.
-- `global_superstore_cleaned.csv` — Cleaned dataset.
-- `README.md` — Project documentation.
 
 ## How to Run
 
-Install the required packages:
-
 ```bash
-pip install pandas openpyxl jupyter
+pip install pandas jupyter
+jupyter notebook
 ```
 
-Open the notebook in Jupyter Notebook, JupyterLab, or VS Code and run the cells.
+Open `Clean_Messy_Dataset_Pandas.ipynb` and run all cells.
 
 **Project Type:** Data Analytics / Data Cleaning

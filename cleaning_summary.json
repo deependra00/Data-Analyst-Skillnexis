@@ -1,0 +1,18 @@
+{
+  "original_rows": 32,
+  "original_columns": 5,
+  "duplicate_rows_removed": 1,
+  "missing_values_before": {
+    "date": 1,
+    "calories": 2
+  },
+  "rows_after_cleaning": 31,
+  "rows_removed_by_filter": 0,
+  "final_rows": 31,
+  "final_columns": 7,
+  "created_columns": [
+    "numeric_total = duration + pulse",
+    "non_missing_count"
+  ],
+  "filter": "Filtered out rows with no populated fields."
+}
