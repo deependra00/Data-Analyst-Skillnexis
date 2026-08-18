@@ -1,53 +1,29 @@
-# Clean a Messy Dataset in Pandas
+# EDA, Regression & Power BI Project
 
-This project demonstrates practical **data cleaning and preprocessing using Python and Pandas**.
+## Dataset
+The uploaded file contains 32 rows and 5 columns:
+`Duration`, `Date`, `Pulse`, `Maxpulse`, `Calories`.
 
-## Tasks Completed
+## Important limitation
+The assignment asks for a regression model to predict **Sales**, but the supplied dataset contains **no Sales/Revenue column**. It would be misleading to fabricate a Sales target. This project therefore:
+1. Performs EDA on the supplied dataset.
+2. Builds a baseline linear regression model for **Calories** (the available outcome).
+3. Provides Power BI-ready data and a dashboard specification.
+4. Documents the limitation and recommendations.
 
-1. Loaded the CSV dataset using Pandas.
-2. Cleaned column names and whitespace.
-3. Identified and removed duplicate records.
-4. Handled missing values using median imputation for numeric columns and mode/`Unknown` for text columns.
-5. Filtered rows using a data-driven numeric condition.
-6. Created derived columns from the available dataset fields.
-7. Exported the cleaned dataset as CSV.
-
-## Dataset Summary
-
-- Original shape: `32 rows × 5 columns`
-- Duplicate rows removed: `1`
-- Final shape: `31 rows × 7 columns`
-
-## New Columns
-
-- numeric_total = duration + pulse
-- non_missing_count
-
-## Filtering
-
-Filtered out rows with no populated fields.
+## Model result
+- MAE: 47.794
+- RMSE: 71.022
+- R²: -3.511
 
 ## Files
+- `data/data.csv` — original uploaded dataset
+- `notebooks/EDA_Regression_Analysis.ipynb` — Python notebook
+- `outputs/EDA_Regression_Report.xlsx` — Excel report
+- `outputs/duration_vs_calories.png` — analysis chart
+- `outputs/pulse_vs_calories.png` — analysis chart
+- `powerbi/PowerBI_Data.xlsx` — Power BI-ready workbook
+- `powerbi/POWER_BI_DASHBOARD_GUIDE.md` — dashboard build guide
 
-- `data.csv` — original uploaded dataset
-- `cleaned_dataset.csv` — cleaned and filtered dataset
-- `Clean_Messy_Dataset_Pandas.ipynb` — reproducible Jupyter Notebook
-- `cleaning_summary.json` — cleaning statistics
-- `README.md` — project documentation
-
-## Tools
-
-- Python
-- Pandas
-- Jupyter Notebook
-
-## How to Run
-
-```bash
-pip install pandas jupyter
-jupyter notebook
-```
-
-Open `Clean_Messy_Dataset_Pandas.ipynb` and run all cells.
-
-**Project Type:** Data Analytics / Data Cleaning
+## GitHub
+Upload the whole project folder to a GitHub repository. The `.ipynb`, `.xlsx`, CSV, README, and dashboard guide are included.
